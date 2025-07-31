@@ -1,10 +1,11 @@
 // app/(tabs)/index.tsx
 
 import { useState } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { LanguageDropdown } from '@/components/LanguageDropdown'; // <-- Importez le nouveau composant
+import { LanguageDropdown } from '@/components/LanguageDropdown';
 import { translations } from '@/constants/i18n';
 
 // Définir le type des langues disponibles pour l'état
@@ -13,15 +14,15 @@ type Language = 'fr' | 'ar';
 export default function HomeScreen() {
   const [language, setLanguage] = useState<Language>('fr');
   const t = translations[language];
+  const router = useRouter();
 
   const handleStartGame = () => {
-    // Naviguer vers le premier chapitre
-    console.log("Démarrer l'histoire du prophète Youssef");
+    // Naviguer vers le premier chapitre en passant la langue en paramètre
+    router.push(`/stories/youssef/chapter-1?lang=${language}`);
   };
 
   return (
     <ThemedView style={styles.container}>
-      {/* Utiliser le nouveau composant de menu déroulant */}
       <LanguageDropdown language={language} setLanguage={setLanguage} />
 
       <ThemedText style={styles.title} type="title">
