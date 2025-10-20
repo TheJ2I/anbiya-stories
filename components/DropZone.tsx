@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 250,
-    height: 75,
+    // Make the drop zone taller for a bigger, more inviting target
+    height: 80,
     paddingHorizontal: 15,
     borderWidth: 2,
     borderColor: '#fff',

@@ -13,7 +13,6 @@ type DraggableObjectProps = PropsWithChildren & {
   initialPosition?: { x: number; y: number };
   dropZones: Record<string, { x: number; y: number; width: number; height: number }>;
   onDrop: (itemType: string) => void;
-  // The isDropped prop is no longer needed
   width: number;
   height: number;
 };
@@ -48,20 +47,31 @@ export function DraggableObject({
       const dropZone = dropZones[type];
 
       if (dropZone && dropZone.width > 0) {
-        const objectCenterX = offset.value.x + width / 2;
-        const objectCenterY = offset.value.y + height / 2;
+        // --- START OF THE NEW, MORE FORGIVING LOGIC ---
 
+        // Get the boundaries of the draggable object
+        const objectLeft = offset.value.x;
+        const objectRight = offset.value.x + width;
+        const objectTop = offset.value.y;
+        const objectBottom = offset.value.y + height;
+
+        // Get the boundaries of the drop zone
+        const zoneLeft = dropZone.x;
+        const zoneRight = dropZone.x + dropZone.width;
+        const zoneTop = dropZone.y;
+        const zoneBottom = dropZone.y + dropZone.height;
+
+        // Check if the two rectangles overlap at all
         if (
-          objectCenterX >= dropZone.x &&
-          objectCenterX <= dropZone.x + dropZone.width &&
-          objectCenterY >= dropZone.y &&
-          objectCenterY <= dropZone.y + dropZone.height
+          objectLeft < zoneRight &&
+          objectRight > zoneLeft &&
+          objectTop < zoneBottom &&
+          objectBottom > zoneTop
         ) {
           droppedInCorrectZone = true;
-          // On success, just notify the parent.
-          // The parent will handle unmounting this component.
           runOnJS(onDrop)(type);
         }
+        // --- END OF THE NEW LOGIC ---
       }
 
       if (!droppedInCorrectZone) {
