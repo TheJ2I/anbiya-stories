@@ -1,29 +1,43 @@
+// C:/imad/dev/anbiya-stories/app/stories/youssef/chapter-1.tsx
+
 import React, { useMemo, useState } from 'react';
-import { StyleSheet, TouchableOpacity, ImageBackground, View, Image, Dimensions } from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  ImageBackground,
+  View,
+  Image,
+  Dimensions,
+} from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import Constants from 'expo-constants'; // 1. Use the correct import
 
 import { ThemedText } from '@/components/ThemedText';
 import { DraggableObject } from '@/components/DraggableObject';
 import { DropZone } from '@/components/DropZone';
 import { translations } from '@/constants/i18n';
 
-// Définir le type des langues disponibles
 type Language = 'fr' | 'ar';
+type DraggableItemType = 'sun' | 'moon' | 'planets';
+type AbsoluteLayout = { pageX: number; pageY: number; width: number; height: number };
 
 const { width, height } = Dimensions.get('window');
+
+// 2. Get the status bar height from expo-constants
+const statusBarHeight = Constants.statusBarHeight;
+
+const DRAGGABLE_SIZE = 60;
+
 const gameElements = [
-  { type: 'sun', image: require('@/assets/images/sun.png'), position: { x: width * 0.1, y: height * 0.2 } },
-  { type: 'moon', image: require('@/assets/images/moon.png'), position: { x: width * 0.7, y: height * 0.3 } },
-  ...Array.from({ length: 11 }).map((_, i) => ({
-    type: 'planet',
-    image: require('@/assets/images/planet.png'),
-    position: {
-      x: (i % 4) * 60 + 20,
-      y: Math.floor(i / 4) * 60 + 500,
-    },
-  })),
+  { id: 'sun', type: 'sun', image: require('@/assets/images/sun.png'), initialPosition: { x: width * 0.1, y: height * 0.55 } },
+  { id: 'moon', type: 'moon', image: require('@/assets/images/moon.png'), initialPosition: { x: width * 0.7, y: height * 0.55 } },
+  { id: 'planets', type: 'planets', image: require('@/assets/images/planet.png'), initialPosition: { x: width * 0.4, y: height * 0.55 } },
 ];
+
+const findImageForType = (type: DraggableItemType) => {
+  return gameElements.find(el => el.type === type)?.image;
+};
 
 export default function Chapter1Screen() {
   const router = useRouter();
@@ -31,7 +45,30 @@ export default function Chapter1Screen() {
   const language = (lang as Language) || 'fr';
   const t = useMemo(() => translations[language], [language]);
 
-  const [isPuzzleComplete, setIsPuzzleComplete] = useState(false);
+  const [droppedItems, setDroppedItems] = useState({ sun: false, moon: false, planets: false });
+  const [dropZones, setDropZones] = useState({
+    sun: { x: 0, y: 0, width: 0, height: 0 },
+    moon: { x: 0, y: 0, width: 0, height: 0 },
+    planets: { x: 0, y: 0, width: 0, height: 0 },
+  });
+
+  const areZonesMeasured = Object.values(dropZones).every(zone => zone.width > 0);
+  const isPuzzleComplete = droppedItems.sun && droppedItems.moon && droppedItems.planets;
+
+  // This handler will now work correctly with the valid statusBarHeight value
+  const handleZoneMeasure = (type: DraggableItemType) => (layout: AbsoluteLayout) => {
+    if (dropZones[type].width === 0) {
+      setDropZones(prev => ({
+        ...prev,
+        [type]: {
+          x: layout.pageX,
+          y: layout.pageY - statusBarHeight, // The crucial correction
+          width: layout.width,
+          height: layout.height,
+        },
+      }));
+    }
+  };
 
   const handleNext = () => {
     if (isPuzzleComplete) {
@@ -42,18 +79,19 @@ export default function Chapter1Screen() {
     }
   };
 
-  const handlePuzzleCompletion = () => {
-    setIsPuzzleComplete(true);
+  const onDrop = (itemType: DraggableItemType) => {
+    setDroppedItems(prev => ({ ...prev, [itemType]: true }));
   };
 
   return (
     <GestureHandlerRootView style={styles.flexContainer}>
-      <ImageBackground
-        source={require('@/assets/images/stars.png')}
-        style={styles.fullScreenBackground}
-        resizeMode="cover"
-      >
-        {/* En-tête pour le texte */}
+      <View style={styles.flexContainer}>
+        <ImageBackground
+          source={require('@/assets/images/stars.png')}
+          style={StyleSheet.absoluteFillObject}
+          resizeMode="cover"
+        />
+
         <View style={styles.header}>
           <ThemedText style={styles.storyTitle} type="title">
             {t.chapter1.title}
@@ -63,24 +101,49 @@ export default function Chapter1Screen() {
           </ThemedText>
         </View>
 
-        {/* Espace vide pour les éléments glissables */}
         <View style={styles.gameArea}>
-          {/* Zone de dépôt au milieu */}
-          <DropZone>
-            <ThemedText style={styles.dropZoneText}>
-              {t.chapter1.dropZonePrompt}
-            </ThemedText>
-          </DropZone>
+          <View style={styles.dropZoneContainer}>
+            <DropZone title="Soleil" onMeasure={handleZoneMeasure('sun')}>
+              {droppedItems.sun ? (
+                <Image source={findImageForType('sun')} style={styles.droppedElement} />
+              ) : (
+                <ThemedText style={styles.dropZoneText}>{t.chapter1.sun}</ThemedText>
+              )}
+            </DropZone>
+            <DropZone title="Lune" onMeasure={handleZoneMeasure('moon')}>
+              {droppedItems.moon ? (
+                <Image source={findImageForType('moon')} style={styles.droppedElement} />
+              ) : (
+                <ThemedText style={styles.dropZoneText}>{t.chapter1.moon}</ThemedText>
+              )}
+            </DropZone>
+            <DropZone title="Planètes" onMeasure={handleZoneMeasure('planets')}>
+              {droppedItems.planets ? (
+                <Image source={findImageForType('planets')} style={styles.droppedElement} />
+              ) : (
+                <ThemedText style={styles.dropZoneText}>{t.chapter1.planets}</ThemedText>
+              )}
+            </DropZone>
+          </View>
         </View>
 
-        {/* Éléments à glisser, positionnés au-dessus du fond */}
-        {gameElements.map((item, index) => (
-          <DraggableObject key={index} initialPosition={item.position}>
-            <Image source={item.image} style={styles.gameElement} />
-          </DraggableObject>
+        {areZonesMeasured && gameElements
+          .filter(item => !droppedItems[item.type])
+          .map((item) => (
+            <DraggableObject
+              key={item.id}
+              id={item.id}
+              type={item.type}
+              initialPosition={item.initialPosition}
+              dropZones={dropZones}
+              onDrop={onDrop}
+              width={DRAGGABLE_SIZE}
+              height={DRAGGABLE_SIZE}
+            >
+              <Image source={item.image} style={styles.gameElement} />
+            </DraggableObject>
         ))}
 
-        {/* Pied de page pour le bouton */}
         <View style={styles.footer}>
           <TouchableOpacity
             style={[styles.button, !isPuzzleComplete && styles.buttonDisabled]}
@@ -92,28 +155,34 @@ export default function Chapter1Screen() {
             </ThemedText>
           </TouchableOpacity>
         </View>
-      </ImageBackground>
+      </View>
     </GestureHandlerRootView>
   );
 }
 
 const styles = StyleSheet.create({
+  gameElement: {
+    width: DRAGGABLE_SIZE,
+    height: DRAGGABLE_SIZE,
+  },
+  droppedElement: {
+    width: DRAGGABLE_SIZE - 10,
+    height: DRAGGABLE_SIZE - 10,
+    resizeMode: 'contain',
+  },
   flexContainer: {
     flex: 1,
   },
-  fullScreenBackground: {
-    flex: 1,
-    paddingTop: 50,
-    paddingBottom: 50,
-  },
   header: {
     paddingHorizontal: 20,
-    marginBottom: 40,
+    paddingTop: 50,
     alignItems: 'center',
+    backgroundColor: 'rgba(28, 28, 44, 0.6)',
+    zIndex: 1,
   },
   storyTitle: {
     fontSize: 30,
-    marginBottom: 20,
+    marginBottom: 10,
     textAlign: 'center',
     color: '#fff',
   },
@@ -127,10 +196,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 1,
   },
-  gameElement: {
-    width: 60,
-    height: 60,
+  dropZoneContainer: {
+    alignItems: 'center',
   },
   dropZoneText: {
     color: '#fff',
@@ -140,6 +209,7 @@ const styles = StyleSheet.create({
   footer: {
     padding: 20,
     alignItems: 'center',
+    zIndex: 1,
   },
   button: {
     backgroundColor: '#0a7ea4',

@@ -9,11 +9,14 @@ export const translations = {
       button: 'Commencer le jeu',
     },
     chapter1: {
-      title: 'Le Rêve',
-      text: 'Le prophète Youssef a raconté un rêve à son père : il a vu onze planètes, le soleil et la lune se prosterner devant lui.',
-      dropZonePrompt: 'Fais glisser le soleil, la lune et les planètes ici.',
-      button: 'Continuer',
-    },
+          title: 'Le Rêve',
+          text: 'Le prophète Youssef a raconté un rêve à son père : il a vu onze planètes, le soleil et la lune se prosterner devant lui.',
+          button: 'Continuer',
+          sun: 'Soleil',
+          moon: 'Lune',
+          planets: 'Planètes',
+          dropZonePrompt: 'Fais glisser le soleil, la lune et les planètes ici.',
+        },
   },
   ar: {
     home: {
@@ -23,10 +26,13 @@ export const translations = {
       button: 'ابدأ اللعبة',
     },
     chapter1: {
-      title: 'الرؤيا',
-      text: 'حكى النبي يوسف لوالده رؤيا: رأى أحد عشر كوكبًا والشمس والقمر يسجدون له.',
-      dropZonePrompt: 'اسحب الشمس والقمر والكواكب هنا.',
-      button: 'استمر',
-    },
+          title: 'الرؤيا',
+          text: 'حكى النبي يوسف لوالده رؤيا: رأى أحد عشر كوكبًا والشمس والقمر يسجدون له.',
+          button: 'استمر',
+          sun: 'الشمس',
+          moon: 'القمر',
+          planets: 'الكواكب',
+          dropZonePrompt: 'اسحب الشمس والقمر والكواكب هنا.',
+        },
   },
 };
