@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import { useRouter, useLocalSearchParams } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import Constants from 'expo-constants'; // 1. Use the correct import
+import Constants from 'expo-constants';
 
 import { ThemedText } from '@/components/ThemedText';
 import { DraggableObject } from '@/components/DraggableObject';
@@ -24,15 +24,14 @@ type AbsoluteLayout = { pageX: number; pageY: number; width: number; height: num
 
 const { width, height } = Dimensions.get('window');
 
-// 2. Get the status bar height from expo-constants
 const statusBarHeight = Constants.statusBarHeight;
 
 const DRAGGABLE_SIZE = 60;
 
 const gameElements = [
-  { id: 'sun', type: 'sun', image: require('@/assets/images/sun.png'), initialPosition: { x: width * 0.1, y: height * 0.55 } },
-  { id: 'moon', type: 'moon', image: require('@/assets/images/moon.png'), initialPosition: { x: width * 0.7, y: height * 0.55 } },
-  { id: 'planets', type: 'planets', image: require('@/assets/images/planet.png'), initialPosition: { x: width * 0.4, y: height * 0.55 } },
+  { id: 'sun', type: 'sun', image: require('@/assets/images/youssef/sun.png'), initialPosition: { x: width * 0.1, y: height * 0.55 } },
+  { id: 'moon', type: 'moon', image: require('@/assets/images/youssef/moon.png'), initialPosition: { x: width * 0.7, y: height * 0.55 } },
+  { id: 'planets', type: 'planets', image: require('@/assets/images/youssef/planet.png'), initialPosition: { x: width * 0.4, y: height * 0.55 } },
 ];
 
 const findImageForType = (type: DraggableItemType) => {
@@ -70,10 +69,12 @@ export default function Chapter1Screen() {
     }
   };
 
+  // The single, correct definition of handleNext
   const handleNext = () => {
     if (isPuzzleComplete) {
       console.log("Passer au chapitre 2");
-      // router.push(`/stories/youssef/chapter-2?lang=${language}`);
+      // This line is now active
+      router.push(`/stories/youssef/chapter-2?lang=${language}`);
     } else {
       console.log("Le puzzle n'est pas terminé !");
     }
@@ -87,7 +88,7 @@ export default function Chapter1Screen() {
     <GestureHandlerRootView style={styles.flexContainer}>
       <View style={styles.flexContainer}>
         <ImageBackground
-          source={require('@/assets/images/stars.png')}
+          source={require('@/assets/images/youssef/stars.png')}
           style={StyleSheet.absoluteFillObject}
           resizeMode="cover"
         />
