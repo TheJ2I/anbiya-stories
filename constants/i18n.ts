@@ -113,6 +113,60 @@ export const translations = {
           ],
           button: "Continuer",
         },
+    chapter7: {
+      title: "Au Pouvoir",
+      storySegments: [
+        {
+          text: "Le Roi fut très impressionné par la sagesse et l'honnêteté de Youssef.",
+          // image: require('@/assets/images/youssef/chapter7_scene1.png')
+        },
+        {
+          text: "Il nomma Youssef gardien des trésors de l'Égypte pour gérer les récoltes.",
+          // image: require('@/assets/images/youssef/chapter7_scene2.png')
+        },
+        {
+          text: "Youssef travailla dur et remplit les greniers pendant les sept années d'abondance.",
+          // image: require('@/assets/images/youssef/chapter7_scene3.png')
+        },
+      ],
+      button: "Continuer",
+    },
+    chapter8: {
+      title: "Les Retrouvailles",
+      storySegments: [
+        {
+          text: "La famine toucha aussi le pays de Canaan, où vivaient Jacob et ses fils.",
+          // image: require('@/assets/images/youssef/chapter8_scene1.png')
+        },
+        {
+          text: "Les frères de Youssef vinrent en Égypte pour acheter de la nourriture. Ils entrèrent chez lui.",
+          // image: require('@/assets/images/youssef/chapter8_scene2.png')
+        },
+        {
+          text: "Youssef les reconnut tout de suite, mais eux ne le reconnurent pas. Il leur donna des provisions.",
+          // image: require('@/assets/images/youssef/chapter8_scene3.png')
+        },
+      ],
+      button: "Continuer",
+    },
+    chapter9: {
+      title: "La Famille Réunie",
+      storySegments: [
+        {
+          text: "Le Prophète Yaacoub et toute sa famille quittèrent Canaan pour venir habiter en Égypte.",
+          // image: require('@/assets/images/youssef/chapter9_scene1.png')
+        },
+        {
+          text: "Youssef accueillit ses parents et ses frères avec une immense joie et beaucoup d'amour.",
+          // image: require('@/assets/images/youssef/chapter9_scene2.png')
+        },
+        {
+          text: "Le rêve de Youssef se réalisa enfin : toute la famille était réunie dans le bien et la paix, remerciant Allah.",
+          // image: require('@/assets/images/youssef/chapter9_scene3.png')
+        },
+      ],
+      button: "Retour à l'accueil",
+    },
   },
   ar: {
     home: {
@@ -225,5 +279,59 @@ export const translations = {
           ],
           button: "استمر",
         },
+    chapter7: {
+      title: "في السلطة",
+      storySegments: [
+        {
+          text: "أعجب الملك بشدة بحكمة يوسف وصدقه.",
+          // image: require('@/assets/images/youssef/chapter7_scene1.png')
+        },
+        {
+          text: "عين الملك يوسف مسؤولاً عن خزائن مصر ليدير المحاصيل.",
+          // image: require('@/assets/images/youssef/chapter7_scene2.png')
+        },
+        {
+          text: "عمل يوسف بجد وملأ المخازن بالطعام خلال سنوات الرخاء السبع.",
+          // image: require('@/assets/images/youssef/chapter7_scene3.png')
+        },
+      ],
+      button: "استمر",
+    },
+    chapter8: {
+      title: "اللقاء",
+      storySegments: [
+        {
+          text: "وصلت المجاعة أيضًا إلى أرض كنعان، حيث يعيش يعقوب وأبناؤه.",
+          // image: require('@/assets/images/youssef/chapter8_scene1.png')
+        },
+        {
+          text: "جاء إخوة يوسف إلى مصر لشراء الطعام ودخلوا عليه.",
+          // image: require('@/assets/images/youssef/chapter8_scene2.png')
+        },
+        {
+          text: "عرفهم يوسف فورًا، لكنهم لم يعرفوه. وأعطاهم ما يحتاجون من الطعام.",
+          // image: require('@/assets/images/youssef/chapter8_scene3.png')
+        },
+      ],
+      button: "استمر",
+    },
+    chapter9: {
+      title: "لم شمل العائلة",
+      storySegments: [
+        {
+          text: "غادر النبي يعقوب وعائلته كنعان ليعيشوا في مصر.",
+          // image: require('@/assets/images/youssef/chapter9_scene1.png')
+        },
+        {
+          text: "استقبل يوسف والديه وإخوته بفرح كبير وحب غامر.",
+          // image: require('@/assets/images/youssef/chapter9_scene2.png')
+        },
+        {
+          text: "تحقق حلم يوسف أخيرًا: اجتمعت العائلة كلها في خير وسلام، شاكرين الله.",
+          // image: require('@/assets/images/youssef/chapter9_scene3.png')
+        },
+      ],
+      button: "العودة للرئيسية",
+    },
   },
 };

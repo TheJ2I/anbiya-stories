@@ -92,10 +92,11 @@ export default function Chapter6Screen() {
     });
   };
 
+// Dans chapter-6.tsx
   const handleFinalContinue = () => {
     if (isLastScene && !isAnimating.value) {
       console.log('Navigate to Chapter 7');
-      // router.push(`/stories/youssef/chapter-7?lang=${language}`);
+      router.push(`/stories/youssef/chapter-7?lang=${language}`); // Ligne décommentée
     }
   };
 
