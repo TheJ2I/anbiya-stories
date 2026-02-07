@@ -47,72 +47,72 @@ export const translations = {
       button: 'Continuer', // Added a button for consistency
     },
     chapter4: {
-          title: "La Tentation",
-          storySegments: [
-            {
-              text: "Youssef grandit dans la maison d'Al-Aziz et devint un jeune homme très sage et respectueux.",
-              // image: require('@/assets/images/chapter4_scene1.jpg') // Jeune Youssef dans une maison égyptienne
-            },
-            {
-              text: "Mais Zulaykha, la femme d'Al-Aziz, essaya de le pousser à faire quelque chose de mal.",
-              // image: require('@/assets/images/chapter4_scene2.jpg') // Scène discrète : Zulaykha parlant à Youssef qui détourne le regard
-            },
-            {
-              text: "Youssef refusa car il craignait Allah. En s'enfuyant, sa chemise se déchira dans son dos.",
-              // image: require('@/assets/images/chapter4_scene3.jpg') // Youssef courant, une déchirure visible sur sa chemise (vue de dos)
-            },
-            {
-              text: "La chemise déchirée par derrière montra à Al-Aziz que Youssef était innocent et disait la vérité.",
-              // image: require('@/assets/images/chapter4_scene4.jpg') // Al-Aziz examinant la chemise déchirée, Youssef debout calmement
-            },
-          ],
-          button: "Continuer",
+      title: "La Tentation",
+      storySegments: [
+        {
+          text: "Youssef grandit dans la maison d'Al-Aziz et devint un jeune homme très sage et respectueux.",
+          // image: require('@/assets/images/chapter4_scene1.jpg') // Jeune Youssef dans une maison égyptienne
         },
+        {
+          text: "Mais Zulaykha, la femme d'Al-Aziz, essaya de le pousser à faire quelque chose de mal.",
+          // image: require('@/assets/images/chapter4_scene2.jpg') // Scène discrète : Zulaykha parlant à Youssef qui détourne le regard
+        },
+        {
+          text: "Youssef refusa car il craignait Allah. En s'enfuyant, sa chemise se déchira dans son dos.",
+          // image: require('@/assets/images/chapter4_scene3.jpg') // Youssef courant, une déchirure visible sur sa chemise (vue de dos)
+        },
+        {
+          text: "La chemise déchirée par derrière montra à Al-Aziz que Youssef était innocent et disait la vérité.",
+          // image: require('@/assets/images/chapter4_scene4.jpg') // Al-Aziz examinant la chemise déchirée, Youssef debout calmement
+        },
+      ],
+      button: "Continuer",
+    },
     chapter5: {
-          title: "La Prison",
-          storySegments: [
-            {
-              text: "Même s'il était innocent, Youssef fut envoyé en prison pour un temps.",
-              // image: require('@/assets/images/chapter5_scene1.jpg') // Image: Youssef entrant calmement en prison
-            },
-            {
-              text: "En prison, Youssef était connu pour sa sagesse et sa gentillesse. Il parlait d'Allah aux autres prisonniers.",
-              // image: require('@/assets/images/chapter5_scene2.jpg') // Image: Youssef parlant gentiment à d'autres prisonniers
-            },
-            {
-              text: "Deux hommes en prison firent des rêves étranges et demandèrent à Youssef de les expliquer.",
-              // image: require('@/assets/images/chapter5_scene3.jpg') // Image: Deux prisonniers parlant à Youssef, l'air perplexe
-            },
-            {
-               // Explains the interpretation simply
-              text: "Grâce à Allah, Youssef expliqua leurs rêves : l'un serait libéré et l'autre non.",
-              // image: require('@/assets/images/chapter5_scene4.jpg') // Image: Youssef expliquant, un prisonnier a l'air soulagé, l'autre triste/inquiet
-            },
-          ],
-          button: "Continuer",
+      title: "La Prison",
+      storySegments: [
+        {
+          text: "Même s'il était innocent, Youssef fut envoyé en prison pour un temps.",
+          // image: require('@/assets/images/chapter5_scene1.jpg') // Image: Youssef entrant calmement en prison
         },
+        {
+          text: "En prison, Youssef était connu pour sa sagesse et sa gentillesse. Il parlait d'Allah aux autres prisonniers.",
+          // image: require('@/assets/images/chapter5_scene2.jpg') // Image: Youssef parlant gentiment à d'autres prisonniers
+        },
+        {
+          text: "Deux hommes en prison firent des rêves étranges et demandèrent à Youssef de les expliquer.",
+          // image: require('@/assets/images/chapter5_scene3.jpg') // Image: Deux prisonniers parlant à Youssef, l'air perplexe
+        },
+        {
+          // Explains the interpretation simply
+          text: "Grâce à Allah, Youssef expliqua leurs rêves : l'un serait libéré et l'autre non.",
+          // image: require('@/assets/images/chapter5_scene4.jpg') // Image: Youssef expliquant, un prisonnier a l'air soulagé, l'autre triste/inquiet
+        },
+      ],
+      button: "Continuer",
+    },
     chapter6: {
-          title: "Le Rêve du Roi",
-          storySegments: [
-            {
-              text: "Le Roi d'Égypte fit un rêve étrange : sept vaches maigres mangeaient sept vaches grasses.",
-              // image: require('@/assets/images/chapter6_scene1.jpg') // Image: Roi pensif, rêve de vaches
-            },
-            {
-              text: "Personne ne pouvait expliquer ce rêve. Le prisonnier libéré se souvint alors de Youssef et de son don.",
-              // image: require('@/assets/images/chapter6_scene2.jpg') // Image: Prisonnier parlant au Roi
-            },
-            {
-              text: "Youssef fut sorti de prison. Il expliqua le rêve grâce à Allah : il y aurait sept années d'abondance suivies de sept années de famine.",
-              // image: require('@/assets/images/chapter6_scene3.jpg') // Image: Youssef expliquant le rêve au Roi
-            },
-            {
-              text: "Youssef conseilla aussi au Roi de stocker de la nourriture pendant les bonnes années pour se préparer.",
-              // image: require('@/assets/images/chapter6_scene4.jpg') // Image: Youssef donnant des conseils, peut-être devant des silos/greniers
-            },
-          ],
-          button: "Continuer",
+      title: "Le Rêve du Roi",
+      storySegments: [
+        {
+          text: "Le Roi d'Égypte fit un rêve étrange : sept vaches maigres mangeaient sept vaches grasses.",
+          // image: require('@/assets/images/chapter6_scene1.jpg') // Image: Roi pensif, rêve de vaches
         },
+        {
+          text: "Personne ne pouvait expliquer ce rêve. Le prisonnier libéré se souvint alors de Youssef et de son don.",
+          // image: require('@/assets/images/chapter6_scene2.jpg') // Image: Prisonnier parlant au Roi
+        },
+        {
+          text: "Youssef fut sorti de prison. Il expliqua le rêve grâce à Allah : il y aurait sept années d'abondance suivies de sept années de famine.",
+          // image: require('@/assets/images/chapter6_scene3.jpg') // Image: Youssef expliquant le rêve au Roi
+        },
+        {
+          text: "Youssef conseilla aussi au Roi de stocker de la nourriture pendant les bonnes années pour se préparer.",
+          // image: require('@/assets/images/chapter6_scene4.jpg') // Image: Youssef donnant des conseils, peut-être devant des silos/greniers
+        },
+      ],
+      button: "Continuer",
+    },
     chapter7: {
       title: "Au Pouvoir",
       storySegments: [
@@ -213,72 +213,72 @@ export const translations = {
       button: 'استمر', // Added a button for consistency
     },
     chapter4: {
-          title: "المراودة", // Ou "الإغواء" si préféré
-          storySegments: [
-            {
-              text: "كبر يوسف في بيت العزيز وأصبح شابًا حكيمًا ومحترمًا جدًا.",
-              // image: require('@/assets/images/chapter4_scene1.jpg') // نفس الصورة
-            },
-            {
-              text: "لكن زليخة، زوجة العزيز، حاولت دفعه لفعل شيء سيء.",
-              // image: require('@/assets/images/chapter4_scene2.jpg') // نفس الصورة
-            },
-            {
-              text: "رفض يوسف لأنه كان يخاف الله. وعندما هرب، تمزق قميصه من الخلف.",
-              // image: require('@/assets/images/chapter4_scene3.jpg') // نفس الصورة
-            },
-            {
-              text: "القميص الممزق من الخلف أظهر للعزيز أن يوسف كان بريئًا ويقول الحقيقة.",
-              // image: require('@/assets/images/chapter4_scene4.jpg') // نفس الصورة
-            },
-          ],
-          button: "استمر",
+      title: "المراودة", // Ou "الإغواء" si préféré
+      storySegments: [
+        {
+          text: "كبر يوسف في بيت العزيز وأصبح شابًا حكيمًا ومحترمًا جدًا.",
+          // image: require('@/assets/images/chapter4_scene1.jpg') // نفس الصورة
         },
+        {
+          text: "لكن زليخة، زوجة العزيز، حاولت دفعه لفعل شيء سيء.",
+          // image: require('@/assets/images/chapter4_scene2.jpg') // نفس الصورة
+        },
+        {
+          text: "رفض يوسف لأنه كان يخاف الله. وعندما هرب، تمزق قميصه من الخلف.",
+          // image: require('@/assets/images/chapter4_scene3.jpg') // نفس الصورة
+        },
+        {
+          text: "القميص الممزق من الخلف أظهر للعزيز أن يوسف كان بريئًا ويقول الحقيقة.",
+          // image: require('@/assets/images/chapter4_scene4.jpg') // نفس الصورة
+        },
+      ],
+      button: "استمر",
+    },
     chapter5: {
-          title: "السجن",
-          storySegments: [
-            {
-              text: "رغم أنه كان بريئًا، أُرسل يوسف إلى السجن لبعض الوقت.",
-              // image: require('@/assets/images/chapter5_scene1.jpg') // نفس الصورة
-            },
-            {
-              text: "في السجن، عُرف يوسف بحكمته ولطفه. كان يحدث السجناء الآخرين عن الله.",
-              // image: require('@/assets/images/chapter5_scene2.jpg') // نفس الصورة
-            },
-            {
-              text: "رأى رجلان في السجن أحلامًا غريبة وطلبوا من يوسف أن يشرحها لهم.",
-              // image: require('@/assets/images/chapter5_scene3.jpg') // نفس الصورة
-            },
-            {
-              // Explains the interpretation simply
-              text: "بفضل الله، شرح يوسف أحلامهم: واحد سيخرج من السجن والآخر لا.",
-              // image: require('@/assets/images/chapter5_scene4.jpg') // نفس الصورة
-            },
-          ],
-          button: "استمر",
+      title: "السجن",
+      storySegments: [
+        {
+          text: "رغم أنه كان بريئًا، أُرسل يوسف إلى السجن لبعض الوقت.",
+          // image: require('@/assets/images/chapter5_scene1.jpg') // نفس الصورة
         },
+        {
+          text: "في السجن، عُرف يوسف بحكمته ولطفه. كان يحدث السجناء الآخرين عن الله.",
+          // image: require('@/assets/images/chapter5_scene2.jpg') // نفس الصورة
+        },
+        {
+          text: "رأى رجلان في السجن أحلامًا غريبة وطلبوا من يوسف أن يشرحها لهم.",
+          // image: require('@/assets/images/chapter5_scene3.jpg') // نفس الصورة
+        },
+        {
+          // Explains the interpretation simply
+          text: "بفضل الله، شرح يوسف أحلامهم: واحد سيخرج من السجن والآخر لا.",
+          // image: require('@/assets/images/chapter5_scene4.jpg') // نفس الصورة
+        },
+      ],
+      button: "استمر",
+    },
     chapter6: {
-          title: "رؤيا الملك",
-          storySegments: [
-            {
-              text: "رأى ملك مصر حلمًا غريبًا: سبع بقرات هزيلة تأكل سبع بقرات سمينة.",
-              // image: require('@/assets/images/chapter6_scene1.jpg') // نفس الصورة
-            },
-            {
-              text: "لم يستطع أحد تفسير الحلم. فتذكر السجين الذي أُطلق سراحه يوسف وموهبته.",
-              // image: require('@/assets/images/chapter6_scene2.jpg') // نفس الصورة
-            },
-            {
-              text: "أُخرج يوسف من السجن. وبفضل الله، شرح الحلم: ستكون هناك سبع سنوات من الرخاء تليها سبع سنوات من الجفاف.",
-              // image: require('@/assets/images/chapter6_scene3.jpg') // نفس الصورة
-            },
-            {
-               text: "نصح يوسف الملك أيضًا بتخزين الطعام خلال السنوات الجيدة للاستعداد للسنوات الصعبة.",
-              // image: require('@/assets/images/chapter6_scene4.jpg') // نفس الصورة
-            },
-          ],
-          button: "استمر",
+      title: "رؤيا الملك",
+      storySegments: [
+        {
+          text: "رأى ملك مصر حلمًا غريبًا: سبع بقرات هزيلة تأكل سبع بقرات سمينة.",
+          // image: require('@/assets/images/chapter6_scene1.jpg') // نفس الصورة
         },
+        {
+          text: "لم يستطع أحد تفسير الحلم. فتذكر السجين الذي أُطلق سراحه يوسف وموهبته.",
+          // image: require('@/assets/images/chapter6_scene2.jpg') // نفس الصورة
+        },
+        {
+          text: "أُخرج يوسف من السجن. وبفضل الله، شرح الحلم: ستكون هناك سبع سنوات من الرخاء تليها سبع سنوات من الجفاف.",
+          // image: require('@/assets/images/chapter6_scene3.jpg') // نفس الصورة
+        },
+        {
+          text: "نصح يوسف الملك أيضًا بتخزين الطعام خلال السنوات الجيدة للاستعداد للسنوات الصعبة.",
+          // image: require('@/assets/images/chapter6_scene4.jpg') // نفس الصورة
+        },
+      ],
+      button: "استمر",
+    },
     chapter7: {
       title: "في السلطة",
       storySegments: [
@@ -332,6 +332,146 @@ export const translations = {
         },
       ],
       button: "العودة للرئيسية",
+    },
+  },
+  en: {
+    home: {
+      title: 'Prophets Stories',
+      subtitle: 'The Story of Prophet Yusuf',
+      intro: 'Discover the incredible journey of Prophet Yusuf (peace be upon him) through an interactive and educational game for children.',
+      button: 'Start Game',
+    },
+    chapter1: {
+      title: 'The Dream',
+      text: 'Prophet Yusuf told his father a dream: he saw eleven planets, the sun, and the moon prostrating to him.',
+      button: 'Continue',
+      sun: 'Sun',
+      moon: 'Moon',
+      planets: 'Planets',
+      dropZonePrompt: 'Drag the sun, moon, and planets here.',
+    },
+    chapter2: {
+      title: 'The Well',
+      storySegments: [
+        'Yusuf\'s brothers were jealous of him.',
+        'They took him far, far away from his father...',
+        '...and threw him into a deep, dark well.',
+      ],
+      button: 'Continue',
+    },
+    chapter3: {
+      title: 'Sold in Egypt',
+      storySegments: [
+        {
+          text: 'A caravan of travelers passed by the well and found Yusuf!',
+        },
+        {
+          text: 'They took him with them on their long journey to a distant land called Egypt.',
+        },
+        {
+          text: 'In Egypt, Yusuf was bought by an important and kind man named Al-Aziz, to help in his house.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter4: {
+      title: 'The Temptation',
+      storySegments: [
+        {
+          text: 'Yusuf grew up in Al-Aziz\'s house and became a very wise and respectful young man.',
+        },
+        {
+          text: 'But Zulaykha, Al-Aziz\'s wife, tried to push him to do something bad.',
+        },
+        {
+          text: 'Yusuf refused because he feared Allah. As he ran away, his shirt tore from the back.',
+        },
+        {
+          text: 'The torn shirt from the back showed Al-Aziz that Yusuf was innocent and telling the truth.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter5: {
+      title: 'The Prison',
+      storySegments: [
+        {
+          text: 'Even though he was innocent, Yusuf was sent to prison for a while.',
+        },
+        {
+          text: 'In prison, Yusuf was known for his wisdom and kindness. He spoke to other prisoners about Allah.',
+        },
+        {
+          text: 'Two men in prison had strange dreams and asked Yusuf to explain them.',
+        },
+        {
+          text: 'Thanks to Allah, Yusuf explained their dreams: one would be released and the other would not.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter6: {
+      title: 'The King\'s Dream',
+      storySegments: [
+        {
+          text: 'The King of Egypt had a strange dream: seven lean cows were eating seven fat cows.',
+        },
+        {
+          text: 'No one could explain this dream. The released prisoner then remembered Yusuf and his gift.',
+        },
+        {
+          text: 'Yusuf was brought out of prison. Thanks to Allah, he explained the dream: there would be seven years of abundance followed by seven years of famine.',
+        },
+        {
+          text: 'Yusuf also advised the King to store food during the good years to prepare.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter7: {
+      title: 'In Power',
+      storySegments: [
+        {
+          text: 'The King was very impressed by Yusuf\'s wisdom and honesty.',
+        },
+        {
+          text: 'He appointed Yusuf as guardian of Egypt\'s treasures to manage the crops.',
+        },
+        {
+          text: 'Yusuf worked hard and filled the storehouses with food during the seven years of abundance.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter8: {
+      title: 'The Reunion',
+      storySegments: [
+        {
+          text: 'The famine also reached the land of Canaan, where Jacob and his sons lived.',
+        },
+        {
+          text: 'Yusuf\'s brothers came to Egypt to buy food and entered his presence.',
+        },
+        {
+          text: 'Yusuf recognized them immediately, but they did not recognize him. He gave them the provisions they needed.',
+        },
+      ],
+      button: 'Continue',
+    },
+    chapter9: {
+      title: 'Family Reunited',
+      storySegments: [
+        {
+          text: 'Prophet Yaacoub and his whole family left Canaan to live in Egypt.',
+        },
+        {
+          text: 'Yusuf welcomed his parents and brothers with great joy and overwhelming love.',
+        },
+        {
+          text: 'Yusuf\'s dream finally came true: the whole family was reunited in goodness and peace, thanking Allah.',
+        },
+      ],
+      button: 'Return to Home',
     },
   },
 };

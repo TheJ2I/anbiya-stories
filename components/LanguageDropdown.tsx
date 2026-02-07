@@ -5,7 +5,7 @@ import { View, StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 // Définir le type des langues disponibles
-type Language = 'fr' | 'ar';
+type Language = 'fr' | 'ar' | 'en';
 
 type LanguageDropdownProps = {
   language: Language;
@@ -24,6 +24,7 @@ export function LanguageDropdown({ language, setLanguage }: LanguageDropdownProp
       >
         <Picker.Item label="Français" value="fr" />
         <Picker.Item label="العربية" value="ar" />
+        <Picker.Item label="English" value="en" />
       </Picker>
     </View>
   );
